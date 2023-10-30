@@ -1,4 +1,5 @@
 export default function Pixel() {
   return (
-  <div></div>
-  )}
+    <div style={{ backgroundColor: 'blue', height: '50px', width: '50px' }}></div>
+  )
+}
