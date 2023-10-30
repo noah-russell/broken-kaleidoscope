@@ -1,10 +1,10 @@
-import Pixel from "./Pixel"
+import Pixel from './Pixel'
 
 function App() {
   return (
-  <>
-    <Pixel />
-  </>
+    <>
+      <Pixel />
+    </>
   )
 }
 
