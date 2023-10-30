@@ -4,7 +4,8 @@ import Pixel from './Pixel'
 function App() {
   return (
     // pixel component
-    <Pixel />
+    <>{Array(100).fill(<Pixel />)}</>
   )
 }
+
 export default App
