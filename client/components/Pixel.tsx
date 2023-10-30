@@ -1,17 +1,22 @@
 import { useState } from 'react'
 
 export function Pixel() {
-  const [color, setColor] = useState('blue')
+  const getRandomColor = () =>
+    `#${Math.floor(Math.random() * 0x1000000)
+      .toString(16)
+      .padStart(6, '0')}`
 
-  function changeColor() {
-    setColor('red')
-  }
+  const [color, setColor] = useState(getRandomColor())
+
+  // function changeColor() {
+  //   setColor('red')
+  // }
   return (
     <div
       style={{
         fontFamily: 'Times New Roman',
-        height: '15px',
-        width: '15px',
+        height: '10px',
+        width: '10px',
         backgroundColor: color,
       }}
     ></div>
