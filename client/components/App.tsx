@@ -4,6 +4,15 @@ function App() {
   return (
     <>
       <Pixel />
+      <Pixel />
+      <Pixel />
+      <Pixel />
+      <Pixel />
+      <Pixel />
+      <Pixel />
+      <Pixel />
+      <Pixel />
+      
     </>
   )
 }
