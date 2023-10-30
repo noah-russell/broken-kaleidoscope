@@ -1,5 +1,11 @@
+import Pixel from './pixel'
+
 function App() {
-  return <div>React development has begun!</div>
+  return (
+    <>
+      <Pixel />
+    </>
+  )
 }
 
 export default App
