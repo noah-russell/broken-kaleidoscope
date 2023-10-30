@@ -1,16 +1,9 @@
 import Pixel from './Pixel'
 
+const pixels = Array(100).fill(<Pixel />)
+
 function App() {
-  return (
-    <div>
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-    </div>
-  )
+  return <div>{...pixels}</div>
 }
 
 export default App
