@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import { useState } from 'react'
 
 function Pixel() {
@@ -7,6 +9,9 @@ function Pixel() {
       .padStart(6, '0')}`
 
   const [color, setColor] = useState(getRandomColor)
+  const handleClick = (event: UIEvent) => {
+    setColor(getRandomColor)
+  }
 
   return (
     <div
@@ -15,6 +20,7 @@ function Pixel() {
         width: '50px',
         backgroundColor: color,
       }}
+      onClick={handleClick}
     />
   )
 }
