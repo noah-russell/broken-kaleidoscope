@@ -3,8 +3,8 @@ function Pixel() {
     <div
       style={{
         fontFamily: 'Times New Roman',
-        height: '60px',
-        width: '60px',
+        height: '1vh',
+        width: '1vw',
         backgroundColor: '#c9510b',
       }}
     ></div>
