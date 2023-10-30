@@ -8,11 +8,13 @@ export function Pixel() {
 
   const [color, setColor] = useState(getRandomColor())
 
-  // function changeColor() {
-  //   setColor('red')
-  // }
+  function handleClick() {
+    setColor(getRandomColor())
+  }
+
   return (
     <div
+      onClick={handleClick}
       style={{
         fontFamily: 'Times New Roman',
         height: '10px',
