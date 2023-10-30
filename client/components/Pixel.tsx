@@ -1,5 +1,13 @@
 function Pixel() {
-  return <div></div>
+  return (
+    <div
+      style={{
+        height: '50px',
+        width: '50px',
+        backgroundColor: 'yellow',
+      }}
+    />
+  )
 }
 
 export default Pixel
