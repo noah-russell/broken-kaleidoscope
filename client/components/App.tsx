@@ -1,7 +1,9 @@
 import Pixel from './Pixel'
 
+const pixels = Array(100).fill(<Pixel />)
+
 function App() {
-  return <Pixel />
+  return <div>{...pixels}</div>
 }
 
 export default App
