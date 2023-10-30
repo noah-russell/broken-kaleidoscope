@@ -6,8 +6,12 @@ function Pixel() {
       .toString(16)
       .padStart(6, '0')}`
   const [color, changeColor] = useState(getRandomColor())
+  const handleClick = (event: UIEvent) => {
+    changeColor(getRandomColor())
+  }
   return (
     <div
+      onClick={handleClick}
       style={{
         background: color,
         height: '30px',
