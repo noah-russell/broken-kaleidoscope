@@ -1,3 +1,9 @@
 export function Pixel() {
-  return <div>Testttiinnnnggg</div>
+  return (
+    <div  style={{
+      fontFamily: 'Times New Roman',
+    }}>TRRRRY!</div>
+     
+    
+  )
 }
