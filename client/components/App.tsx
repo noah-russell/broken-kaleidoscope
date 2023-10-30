@@ -1,7 +1,16 @@
 import Pixel from './Pixel'
 
 function App() {
-  return <Pixel />
+  return (
+    <div>
+      <Pixel />
+      <Pixel />
+      <Pixel />
+      <Pixel />
+      <Pixel />
+      <Pixel />
+    </div>
+  )
 }
 
 export default App
