@@ -2,7 +2,13 @@ import Pixel from './pixel'
 
 function App() {
   return (
-    <div >
+    <div>
+      <Pixel /> {}
+      <Pixel />
+      <Pixel />
+      <Pixel />
+      <Pixel />
+      <Pixel />
       <Pixel />
     </div>
   )
