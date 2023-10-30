@@ -10,6 +10,10 @@ function Pixel() {
   const handleClick = (event: UIEvent) => {
     setColour(getRandomColor)
   }
+
+  // const handleMouseEnter = (event: UIEvent) => {
+  //   setColour('black')
+  // }
   return (
     <div
       onClick={handleClick}
