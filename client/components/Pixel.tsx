@@ -1,5 +1,7 @@
 function Pixel(){
-return <p>gslkdjflskdjf</p>
+return (
+  <div style={{backgroundColor: 'blue', width: '30%', height: '30px'}}/>
+)
 }
 
 export default Pixel
