@@ -8,6 +8,10 @@ const getRandomColor = () =>
 function Pixel() {
   const [color, setColor] = useState(getRandomColor())
 
+  const handleClick = (event: UIEvent) => {
+    setColor(getRandomColor())
+  }
+
   return (
     <div
       style={{
@@ -16,6 +20,7 @@ function Pixel() {
         width: '1vw',
         backgroundColor: color,
       }}
+      onMouseEnter={handleClick}
     ></div>
   )
 }
