@@ -1,7 +1,11 @@
 function Pixel() {
   return (
     <div
-      style={{ background: 'red', height: '200px', width: '200px' }}
+      style={{
+        background: 'cyan',
+        height: '30px',
+        width: '30px',
+      }}
       className="pixel"
     ></div>
   )
