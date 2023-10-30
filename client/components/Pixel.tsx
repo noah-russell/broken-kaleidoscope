@@ -3,12 +3,10 @@ export function Pixel() {
     <div
       style={{
         fontFamily: 'Times New Roman',
-        height: '30px',
-        width: '30px',
+        height: '15px',
+        width: '15px',
         backgroundColor: 'blue',
       }}
-    >
-      TRRRRY!
-    </div>
+    ></div>
   )
 }
