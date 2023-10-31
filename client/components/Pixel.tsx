@@ -7,17 +7,34 @@ const getRandomColor = () =>
 function Pixel() {
   const [colour, setColour] = useState(getRandomColor)
 
-  // const handleClick = (event: UIEvent) => {
-  //   setColour(getRandomColor)
-  // }
+  const handleClick = (event: UIEvent) => {
+    setColour(getRandomColor)
+  }
 
   const handleMouseEnter = (event: UIEvent) => {
     setColour('black')
   }
 
+  const handleDoubleClick = (event: UIEvent) => {
+    setColour('white')
+  }
+
+  const handleOnDragEnter = (event: UIEvent) => {
+    setColour('yellow')
+  }
+
+  const handleOnContextMenu = (event: UIEvent) => {
+    setColour('red')
+    event.preventDefault()
+  }
+
   return (
     <div
+      onContextMenu={handleOnContextMenu}
       onMouseEnter={handleMouseEnter}
+      onClick={handleClick}
+      onDoubleClick={handleDoubleClick}
+      onDragEnter={handleOnDragEnter}
       style={{ backgroundColor: colour, height: '10px', width: '10px' }}
     ></div>
   )
