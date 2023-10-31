@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import e from 'express'
+import { useState, useEffect } from 'react'
 
 const getRandomColor = () =>
   //Math.random generates a random decimal number bet. 0 and 1
@@ -14,14 +15,68 @@ const getRandomColor = () =>
 function Pixel() {
   //declare useState
   const [colour, setColour] = useState(getRandomColor)
+  //use to track if p key is pressed
+  const [isPKeyPressed, setIsPKeyPressed] = useState(false)
+
+  //use to add event listeners for keyup and keydown
+  useEffect(() => {
+    //keydown is called when p is pressed - set to true
+    //keyup is called when p us released - set to false
+    const handleKeyDown = (e) => {
+      if (e.key === 'p') {
+        setIsPKeyPressed(true)
+      }
+    }
+
+    const handleKeyUp = (e) => {
+      if (e.key === 'p') {
+        setIsPKeyPressed(false)
+      }
+    }
+
+    document.addEventListener('keydown', handleKeyDown)
+    document.addEventListener('keyup', handleKeyUp)
+
+    return () => {
+      //cleanup function of useEffect
+      document.removeEventListener('keydown', handleKeyDown)
+      document.removeEventListener('keyup', handleKeyUp)
+    }
+  }, [])
+  //[] -> ensures that this effect runs only once when the component mounts
+
+  useEffect(() => {
+    if (isPKeyPressed) {
+      setColour('pink')
+    } else {
+      setColour(getRandomColor)
+    }
+    //dependency of the useEffect
+  }, [isPKeyPressed])
 
   //event handler functions
   const handleClick = () => {
     setColour('white')
   }
+
+  const handleDblClick = () => {
+    setColour('black')
+  }
+
+  const handleDragEnter = () => {
+    setColour('red')
+  }
+
+  const handleMouseEnter = () => {
+    setColour('yellow')
+  }
+
   return (
     <div
       onClick={handleClick}
+      onDoubleClick={handleDblClick}
+      onDragEnter={handleDragEnter}
+      onMouseEnter={handleMouseEnter}
       style={{ backgroundColor: colour, height: '20px', width: '20px' }}
     ></div>
   )
