@@ -7,15 +7,19 @@ function Pixel(){
     .padStart(6, '0')}`
     const [color, setColor] = useState(getRandomColor)
     //console.log(color)
-
+    function handleClick(){
+        setColor(getRandomColor)
+    }
     return  (
         <div 
+            onClick={handleClick}
             style={{
                 fontFamily: 'Times New Roman', 
                 background: color,
                 width:'100px', 
                 height:'100px', 
-                }}> 
+                }} 
+            >
         </div>
     )
 }
