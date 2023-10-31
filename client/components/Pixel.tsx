@@ -12,9 +12,24 @@ export function Pixel() {
     setColor(getRandomColor())
   }
 
+  function mouseEnter() {
+    setColor('black')
+  }
+
+  function doubleClick() {
+    setColor('white')
+  }
+
+  function dragEnter() {
+    setColor('yellow')
+  }
+
   return (
     <div
       onClick={handleClick}
+      onMouseEnter={mouseEnter}
+      onDoubleClick={doubleClick}
+      onDragEnter={dragEnter}
       style={{
         fontFamily: 'Times New Roman',
         height: '10px',
