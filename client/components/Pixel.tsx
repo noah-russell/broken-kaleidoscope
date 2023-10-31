@@ -8,10 +8,13 @@ export default function Pixel() {
 
   const [color, setColor] = useState(getRandomColor)
   const handleClick = (event: UIEvent) => [setColor(getRandomColor)]
+  const handleEnter = (event: UIEvent) => [setColor('black')]
   return (
     <div
+      // className="heheha"
       onClick={handleClick}
       style={{ backgroundColor: color, height: '25px', width: '24px' }}
+      onDragEnter={handleEnter}
     ></div>
   )
 }
