@@ -1,7 +1,10 @@
+import { useState } from 'react'
+
 function Pixel() {
+  const [colour, setColour] = useState('purple')
   return (
     <div
-      style={{ backgroundColor: 'purple', height: '20px', width: '20px' }}
+      style={{ backgroundColor: colour, height: '20px', width: '20px' }}
     ></div>
   )
 }
