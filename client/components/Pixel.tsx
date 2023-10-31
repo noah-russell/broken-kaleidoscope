@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { MouseEvent } from 'react'
+import { useEffect } from 'react'
 
 function Pixel() {
   const getRandomColor = () =>
@@ -17,14 +18,6 @@ function Pixel() {
     changeColor('salmon')
   }
 
-  // const scrollTop = (event: UIEvent) => {
-  //   changeColor(getRandomColor())
-  // }
-
-  // const scrollTop = (event: UIEvent) => {
-  //   changeColor(event.currentTarget.color)
-  // }
-
   const onDrag = (event: UIEvent) => {
     changeColor('orange')
   }
@@ -34,17 +27,28 @@ function Pixel() {
     changeColor('black')
   }
 
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     if (window.scrollY > 20) {
+  //       changeColor(getRandomColor())
+  //     } else {
+  //       changeColor(getRandomColor())
+  //     }
+  //   }
+  // })
+
   // console.log(scrollTop)
 
   return (
     <div
       style={{
         background: color,
-        height: '30px',
-        width: '30px',
+        height: '50px',
+        width: '50px',
+        overflow: 'auto',
       }}
       className="pixel"
-      // onScroll={scrollTop}
+      // onScroll={useEffect}
       onClick={handleClick}
       onMouseEnter={mouseOver}
       onDragEnter={onDrag}
