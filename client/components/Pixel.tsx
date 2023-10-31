@@ -71,13 +71,19 @@ function Pixel() {
     setColour('yellow')
   }
 
+  const handleContextMenu = (e) => {
+    setColour('green')
+    e.preventDefault()
+  }
+
   return (
     <div
+      onContextMenu={handleContextMenu}
       onClick={handleClick}
       onDoubleClick={handleDblClick}
       onDragEnter={handleDragEnter}
       onMouseEnter={handleMouseEnter}
-      style={{ backgroundColor: colour, height: '20px', width: '20px' }}
+      style={{ backgroundColor: colour, height: '50px', width: '50px' }}
     ></div>
   )
 }

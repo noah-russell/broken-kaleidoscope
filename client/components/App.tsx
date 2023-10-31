@@ -1,6 +1,6 @@
 import Pixel from './Pixel'
 
-const pixels = Array(500).fill(<Pixel />)
+const pixels = Array(100).fill(<Pixel />)
 
 function App() {
   return <>{...pixels}</>
