@@ -7,17 +7,29 @@ function Pixel(){
     .padStart(6, '0')}`
     const [color, setColor] = useState(getRandomColor)
     //console.log(color)
-    function handleClick(){
-        setColor(getRandomColor)
+    // function handleClick(){
+    //     setColor(getRandomColor)
+    // }
+    function handleMouseEnter(){
+        setColor('#00FF00')
     }
+    // function handleDoubleClick(){
+    //     setColor('#000000')
+    // }
+    // function handleDragEnter(){
+    //     setColor('#FFFF00')
+    // }
     return  (
         <div 
-            onClick={handleClick}
+            //onClick={handleClick}
+            onMouseEnter={handleMouseEnter}
+            //onDoubleClick={handleDoubleClick}
+            //onDragEnter={handleDragEnter}
             style={{
                 fontFamily: 'Times New Roman', 
                 background: color,
-                width:'100px', 
-                height:'100px', 
+                width:'5px', 
+                height:'5px', 
                 }} 
             >
         </div>

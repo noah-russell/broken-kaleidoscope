@@ -1,34 +1,13 @@
 import Pixel from './Pixel'
 
 function App() {
-  return (
-    <div id="container">
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    </div> 
-  )
+  const result = []
+  while(result.length < 100000){ 
+    result.push(<Pixel />)
+  }
+
+  return result
 }
 
 export default App
+
