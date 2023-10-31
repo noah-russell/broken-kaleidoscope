@@ -9,6 +9,14 @@ function Pixel() {
   const handleClick = (event: UIEvent) => {
     setColor(getRandomColor())
   }
+  function colorWhite() {
+    setColor('darkSalmon')
+  }
+
+  function colorYellow() {
+    setColor('Yellow')
+  }
+
   return (
     <div
       style={{
@@ -18,6 +26,9 @@ function Pixel() {
         background: color,
       }}
       onClick={handleClick}
+      onMouseEnter={handleClick}
+      onDoubleClick={colorWhite}
+      onDragEnter={colorYellow}
     ></div>
   )
 }
