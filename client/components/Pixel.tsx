@@ -12,28 +12,34 @@ export function Pixel() {
     setColor(getRandomColor())
   }
 
-  function mouseEnter() {
-    setColor('black')
+  function rightClick(event) {
+    event.preventDefault()
+    return setColor('black')
   }
 
-  function doubleClick() {
-    setColor('white')
-  }
+  // function mouseEnter() {
+  //   setColor('black')
+  // }
 
-  function dragEnter() {
-    setColor('yellow')
-  }
+  // function doubleClick() {
+  //   setColor('white')
+  // }
+
+  // function dragEnter() {
+  //   setColor('yellow')
+  // }
 
   return (
     <div
       onClick={handleClick}
-      onMouseEnter={mouseEnter}
-      onDoubleClick={doubleClick}
-      onDragEnter={dragEnter}
+      onMouseEnter={() => setColor('red')}
+      onDoubleClick={() => setColor('black')}
+      onDragEnter={() => setColor('white')}
+      onContextMenu={rightClick}
       style={{
         fontFamily: 'Times New Roman',
-        height: '10px',
-        width: '10px',
+        height: '20px',
+        width: '20px',
         backgroundColor: color,
       }}
     ></div>
