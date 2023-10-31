@@ -1,7 +1,7 @@
 import Pixel from './Pixel'
 
 function App() {
-  const pixelArr = Array(3000).fill('')
+  const pixelArr = Array(10000).fill('')
   return (
     <>
       {pixelArr.map((x, i) => (
