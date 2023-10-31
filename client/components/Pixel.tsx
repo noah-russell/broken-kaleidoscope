@@ -12,9 +12,16 @@ const getRandomColor = () =>
     .padStart(6, '0')}`
 
 function Pixel() {
+  //declare useState
   const [colour, setColour] = useState(getRandomColor)
+
+  //event handler functions
+  const handleClick = () => {
+    setColour('white')
+  }
   return (
     <div
+      onClick={handleClick}
       style={{ backgroundColor: colour, height: '20px', width: '20px' }}
     ></div>
   )
