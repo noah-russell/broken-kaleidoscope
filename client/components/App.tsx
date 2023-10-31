@@ -6,7 +6,7 @@ function App() {
   // Array.from([<Pixel />], (x) => 1 + 1)
   // Array.from({ length: 400 }, (v, i) => i)
   return (
-    <>{Array(7000).fill(<Pixel/>)}</>
+    <>{Array(1566).fill(<Pixel />)}</>
 
     // <>
     //   <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel />{' '}
