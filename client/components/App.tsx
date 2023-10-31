@@ -1,15 +1,10 @@
 import Pixel from './pixel'
 
 function App() {
+  const pixArr = Array(5000).fill(<Pixel />)
   return (
     <div>
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
+    {pixArr}
     </div>
   )
 }

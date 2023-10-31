@@ -13,8 +13,8 @@ function Pixel() {
     <div
       style={{
         fontFamily: 'Times New Roman',
-        height: '500px',
-        width: '500px',
+        height: '50px',
+        width: '50px',
         background: color,
       }}
       onClick={handleClick}
