@@ -4,10 +4,18 @@ import { useState } from 'react'
 import { MouseEvent } from 'react'
 
 function Pixel() {
-  const getRandomColor = () =>
-    `#${Math.floor(Math.random() * 0x1000000)
-      .toString(16)
-      .padStart(6, '0')}`
+  function getRandomColor() {
+    const range = 0x100
+    const add = 0x10000
+
+    const randomNumber = Math.floor(Math.random() * range)
+
+    const result = randomNumber.toString(16)
+
+    console.log(result)
+
+    return `#00${result}00`
+  }
 
   const [color, setColor] = useState(getRandomColor)
   const handleClick = () => {
