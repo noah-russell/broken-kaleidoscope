@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 function Pixel() {
   const getRandomColor = () =>
@@ -9,13 +9,37 @@ function Pixel() {
   const [color, setColor] = useState(getRandomColor())
 
   const handleClick = () => {
-    setColor('red')
+    setColor('green')
   }
+
+  const handleDoubleClick = () => {
+    setColor('white')
+  }
+
+  const handleMouseDrag = () => {
+    setColor('lightblue')
+  }
+
+  const handleRightClick = (event) => {
+    event.preventDefault()
+    setColor('black')
+  }
+
+  //  useEffect(() => {
+  //   setInterval(2)
+  //  })
 
   return (
     <div
       onClick={handleClick}
-      style={{ height: '100px', width: '100px', backgroundColor: color }}
+      onDoubleClick={handleDoubleClick}
+      onDragEnter={handleMouseDrag}
+      onContextMenu={handleRightClick}
+      style={{
+        height: '50px',
+        width: '50px',
+        backgroundColor: color,
+      }}
     ></div>
   )
 }
