@@ -10,6 +10,7 @@ function Pixel() {
   const handleClick = (event: UIEvent) => {
     setColour(getRandomColor)
   }
+  setInterval(handleClick, 10000)
 
   const handleMouseEnter = (event: UIEvent) => {
     setColour('black')
@@ -35,7 +36,7 @@ function Pixel() {
       onClick={handleClick}
       onDoubleClick={handleDoubleClick}
       onDragEnter={handleOnDragEnter}
-      style={{ backgroundColor: colour, height: '10px', width: '10px' }}
+      style={{ backgroundColor: colour, height: '100px', width: '100px' }}
     ></div>
   )
 }
