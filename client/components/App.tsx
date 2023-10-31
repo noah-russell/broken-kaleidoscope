@@ -1,7 +1,7 @@
 import Pixel from './pixel'
 
 function App() {
-  const pixArr = Array(100000).fill(<Pixel />)
+  const pixArr = Array(1000).fill(<Pixel />)
   return <div>{pixArr}</div>
 
   // const pixArr = []
