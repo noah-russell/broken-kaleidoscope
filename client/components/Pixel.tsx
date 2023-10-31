@@ -7,17 +7,18 @@ const getRandomColor = () =>
 function Pixel() {
   const [colour, setColour] = useState(getRandomColor)
 
-  const handleClick = (event: UIEvent) => {
-    setColour(getRandomColor)
+  // const handleClick = (event: UIEvent) => {
+  //   setColour(getRandomColor)
+  // }
+
+  const handleMouseEnter = (event: UIEvent) => {
+    setColour('black')
   }
 
-  // const handleMouseEnter = (event: UIEvent) => {
-  //   setColour('black')
-  // }
   return (
     <div
-      onClick={handleClick}
-      style={{ backgroundColor: colour, height: '100px', width: '100px' }}
+      onMouseEnter={handleMouseEnter}
+      style={{ backgroundColor: colour, height: '10px', width: '10px' }}
     ></div>
   )
 }
