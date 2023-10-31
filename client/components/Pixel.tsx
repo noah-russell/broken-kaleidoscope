@@ -54,6 +54,19 @@ function Pixel() {
     //dependency of the useEffect
   }, [isPKeyPressed])
 
+  // Use setInterval to update the color every 1 second
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (!isPKeyPressed) {
+        setColour(getRandomColor())
+      }
+    }, 1000)
+
+    return () => {
+      clearInterval(interval)
+    }
+  }, [isPKeyPressed])
+
   //event handler functions
   const handleClick = () => {
     setColour('white')
@@ -76,6 +89,8 @@ function Pixel() {
     e.preventDefault()
   }
 
+  setInterval(getRandomColor, 1000)
+
   return (
     <div
       onContextMenu={handleContextMenu}
@@ -83,7 +98,12 @@ function Pixel() {
       onDoubleClick={handleDblClick}
       onDragEnter={handleDragEnter}
       onMouseEnter={handleMouseEnter}
-      style={{ backgroundColor: colour, height: '50px', width: '50px' }}
+      style={{
+        backgroundColor: colour,
+        height: '50px',
+        width: '50px',
+        borderRadius: '20px',
+      }}
     ></div>
   )
 }
