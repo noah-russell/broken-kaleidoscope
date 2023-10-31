@@ -1,24 +1,29 @@
 import { useState } from 'react'
 
 function Pixel() {
-  const getRandomColor = () =>
+  const getRandomColour = () =>
     `#${Math.floor(Math.random() * 0x1000)
       .toString(16)
       .padStart(3, '0')}`
-  console.log(getRandomColor)
 
 
+  const [colour, setColour] = useState(getRandomColour)
 
-  const [color, setColor] = useState(getRandomColor)
+  const handleClick = (event: UIEvent) => {
+    setColour(getRandomColour)
+  }
+
+
 
   return (
     <div
       style={{
-        backgroundColor: color ,
+        backgroundColor: colour ,
         width: '30px',
         height: '30px',
         margin: '1px',
       }}
+      onClick={handleClick}
     />
   )
 }
