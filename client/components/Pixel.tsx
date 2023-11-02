@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 export function Pixel() {
   const getRandomColor = () =>
@@ -17,6 +17,18 @@ export function Pixel() {
     return setColor('black')
   }
 
+  function Timer() {
+    const [count, setCount] = useState(0)
+
+    useEffect(() => {
+      setTimeout(() => {
+        setCount((count) => count + 1)
+      }, 1999)
+    })
+
+    return getRandomColor()
+  }
+
   // function mouseEnter() {
   //   setColor('black')
   // }
@@ -32,7 +44,7 @@ export function Pixel() {
   return (
     <div
       onClick={handleClick}
-      onMouseEnter={() => setColor('red')}
+      onMouseEnter={() => setColor('green')}
       onDoubleClick={() => setColor('black')}
       onDragEnter={() => setColor('white')}
       onContextMenu={rightClick}
